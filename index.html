@@ -3,19 +3,24 @@
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <title>Fisheye</title>
   </head>
   <body>
     <header>
-        <img src="assets/images/logo.png" class="logo" />
+      <a href="index.html">
+        <img src="assets/images/logo.png" class="logo" alt="Fisheye Home Page" />
+      </a>
+      <a href="#photographers">
         <h1>Nos photographes</h1>
+      </a>
     </header>
     <main id="main">
-        <div class="photographer_section"></div>
+        <section class="photographer_section" id="photographers"></section>
     </main>
-    <script src="scripts/factories/photographerFactory.js"></script>
+    <script src="scripts/templets/photographerFactory.js"></script>
     <script src="scripts/pages/index.js"></script>
     <script src="scripts/pages/photographer.js"></script>
   </body>
