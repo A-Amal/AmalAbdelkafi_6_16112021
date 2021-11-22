@@ -1,9 +1,10 @@
+//import createphotographerCard from "./../templates/photographerFactory.js"
 function createphotographerCard(data) {
     const $wrapper = document.createElement('article')
     const photographerCard = `
         <a href="photographer.html?id=${data.id}" class="photographer-link" aria-label="${data.name}">
             <div class="photographer-picture">
-                <img src="assets/photographers/Photographers ID Photos/${data.portrait}" alt="photo ${data.name}"">
+                <img src="assets/photographers/Photographers ID Photos/${data.portrait}" alt="photo ${data.name}">
             </div>
             <h2  class="photographer-name">${data.name}</h2>
         </a>
@@ -15,7 +16,6 @@ function createphotographerCard(data) {
     $wrapper.innerHTML = photographerCard
     return ($wrapper);
 }
-
     async function getPhotographers() {
         //Recuperer les photographers du fichier photographers.json
            try{

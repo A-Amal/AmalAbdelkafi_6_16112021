@@ -1,8 +1,5 @@
-/*class PhotographerCard{
-    constructor(photographer){
-        this._photographer = photographer;
-    }*/
-  export  function createphotographerCard(data) {
+// eslint-disable-next-line no-unused-vars
+function createphotographerCard(data) {
         const $wrapper = document.createElement('article')
         const photographerCard = `
             <a href="photographer.html?id=${data.id}" class="photographer-link" aria-label="${data.name}">
@@ -19,3 +16,4 @@
         $wrapper.innerHTML = photographerCard
         return ($wrapper);
     }
+
