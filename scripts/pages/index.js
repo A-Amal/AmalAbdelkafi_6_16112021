@@ -2,7 +2,7 @@
     function createphotographerCard(data) {
         const $wrapper = document.createElement('article')
         const photographerCard = `
-            <a href="photographer.html?id=${data.id}" class="photographer-link" aria-label="${data.name}">
+            <a href="photographer.html?id=${data.id}" class="photographer-link" tabindex="0" aria-label="${data.name}">
                 <div class="photographer-picture">
                     <img src="assets/photographers/Photographers ID Photos/${data.portrait}" alt="photo ${data.name}">
                 </div>
