@@ -1,13 +1,80 @@
 #contact_modal {
     display: none;
 }
-
+img{
+    
+}
 #photograph-header {
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    
 }
+.photographer-contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.photographer-info{
+    width: 33%;
+    height: 100%;
+    margin-left: 50px;
+    text-align:left ;
+    
+}
+.photographer-button{
+    width: 33%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+.photographer-picture{
+    width: 33%;
+    height: 100%;
+   margin: auto;
+   text-align: center;
 
+}
+.photographer-picture img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 50px auto;
+}
+.photographer-info .photographer-name{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 83px;
+    color: #D3573C;
+    text-align:left ;
+    margin-block-end: 0em;
+
+}
+.photographer-info .photographer-location{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    color: #901C1C;
+    text-align:left ;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+}
+.photographer-info .photographer-tagline{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #525252;
+    text-align:left ;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+}
 .contact_button {
     font-size: 20px;
     font-weight: bold;
@@ -19,8 +86,23 @@
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
+    margin: auto;
 }
-
+.priceandlike {
+    position: fixed;
+    bottom: 0;
+    right: 2.25rem;
+    z-index: 5;
+    display: flex;
+    gap: 4.125rem;
+    padding: 1.25rem 2.125rem;
+    border-radius: 5px 5px 0 0;
+    background-color: #DB8876;
+    font-size: 1.5rem;
+  }
+  .priceandlike svg {
+    height: 1.5rem;
+  }
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
