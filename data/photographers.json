@@ -61,6 +61,7 @@
 			"photographerId": 82,
 			"title": "Fashion Yellow Beach",
 			"image": "Fashion_Yellow_Beach.jpg",
+			"alt": "femme en tenue jaune",
 			"likes": 62,
 			"date": "2011-12-08",
 			"price": 55
@@ -70,6 +71,7 @@
 			"photographerId": 82,
 			"title": "Fashion Urban Jungle",
 			"image": "Fashion_Urban_Jungle.jpg",
+			"alt": "femme en tenue florale",
 			"likes": 11,
 			"date": "2011-11-06",
 			"price": 55
@@ -79,6 +81,7 @@
 			"photographerId": 82,
 			"title": "Fashion Pattern on a Pattern",
 			"image": "Fashion_Pattern_on_Pattern.jpg",
+			"alt": "femme en tenue rayée",
 			"likes": 72,
 			"date": "2013-08-12",
 			"price": 55
@@ -88,6 +91,7 @@
 			"photographerId": 82,
 			"title": "Wedding Gazebo",
 			"image": "Event_WeddingGazebo.jpg",
+			"alt": "Pavillon de mariage fleurie",
 			"likes": 69,
 			"date": "2018-02-22",
 			"price": 55
@@ -97,6 +101,7 @@
 			"photographerId": 82,
 			"title": "Sparkles",
 			"image": "Event_Sparklers.jpg",
+			"alt": "couple de mariée régardant la salle de fête",
 			"likes": 2,
 			"date": "2020-05-25",
 			"price": 55
@@ -106,6 +111,7 @@
 			"photographerId": 82,
 			"title": "18th Anniversary",
 			"image": "Event_18thAnniversary.jpg",
+			"alt": "vue d'une salle de fête pour un 18e anniversaire",
 			"likes": 33,
 			"date": "2019-06-12",
 			"price": 55
@@ -113,7 +119,9 @@
 		{
 			"id": 8328953,
 			"photographerId": 82,
+			"title": "Wooden Horse Sculpture",
 			"video": "Art_Wooden_Horse_Sculpture.mp4",
+			"alt": "video d'une sculpture d'un cheval en bois",
 			"likes": 24,
 			"date": "2011-12-08",
 			"price": 100
@@ -123,6 +131,7 @@
 			"photographerId": 82,
 			"title": "Triangle Man",
 			"image": "Art_Triangle_Man.jpg",
+			"alt": "photo d'un art abstrait d'un homme",
 			"likes": 88,
 			"date": "2007-05-07",
 			"price": 55
@@ -132,6 +141,7 @@
 			"photographerId": 82,
 			"title": "Purple Tunnel",
 			"image": "Art_Purple_light.jpg",
+			"alt": "un tunnel passage piétons avec graphity",
 			"likes": 24,
 			"date": "2018-05-05",
 			"price": 55
@@ -141,6 +151,7 @@
 			"photographerId": 82,
 			"title": "Art Mine",
 			"image": "Art_Mine.jpg",
+			"alt": "photo d'un art abstrait avec des oiseaux",
 			"likes": 75,
 			"date": "2019-11-25",
 			"price": 55
@@ -151,6 +162,7 @@
 			"photographerId": 925,
 			"title": "8 Rows",
 			"image": "Sport_2000_with_8.jpg",
+			"alt": "personnes en canoé en train de ramer",
 			"likes": 52,
 			"date": "2013-02-30",
 			"price": 70
@@ -160,6 +172,7 @@
 			"photographerId": 925,
 			"title": "Fashion Wings",
 			"image": "Fashion_Wings.jpg",
+			"alt": "photo d'un couple",
 			"likes": 58,
 			"date": "2018-07-17",
 			"price": 70
@@ -169,6 +182,7 @@
 			"photographerId": 925,
 			"title": "Melody Red on Stripes",
 			"image": "Fashion_Melody_Red_on_Stripes.jpg",
+			"alt": "photo d'un couple",
 			"likes": 11,
 			"date": "2019-08-12",
 			"price": 70
@@ -178,6 +192,7 @@
 			"photographerId": 925,
 			"title": "Venture Conference",
 			"image": "Event_VentureConference.jpg",
+			"alt": "personnes en réunion",
 			"likes": 2,
 			"date": "2019-01-02",
 			"price": 70
@@ -187,6 +202,7 @@
 			"photographerId": 925,
 			"title": "Product Pitch",
 			"image": "Event_ProductPitch.jpg",
+			"alt": "personnes en train de faire une présentation",
 			"likes": 3,
 			"date": "2019-05-20",
 			"price": 70
@@ -196,6 +212,7 @@
 			"photographerId": 925,
 			"title": "Musical Festival Keyboard",
 			"image": "Event_KeyboardCheck.jpg",
+			"alt": "personne en train de jouer du keyboard à un festival",
 			"likes": 52,
 			"date": "2019-07-18",
 			"price": 70
@@ -205,6 +222,7 @@
 			"photographerId": 925,
 			"title": "Musical Festival Singer",
 			"image": "Event_Emcee.jpg",
+			"alt": "personne en train de chanter à un festival",
 			"likes": 23,
 			"date": "2018-02-22",
 			"price": 70
@@ -214,6 +232,7 @@
 			"photographerId": 925,
 			"title": "Animal Majesty",
 			"image": "Animals_Majesty.jpg",
+			"alt": "portrait d'un cerf",
 			"likes": 52,
 			"date": "2017-03-13",
 			"price": 70
@@ -221,7 +240,9 @@
 		{
 			"id": 83958935,
 			"photographerId": 925,
+			"title": "Cute Puppy on Sunset",
 			"video": "Animals_Puppiness.mp4",
+			"alt": "video d'un chiot à la mer lors d'un coucher de soleil",
 			"likes": 52,
 			"date": "2016-06-12",
 			"price": 70
@@ -229,7 +250,9 @@
 		{
 			"id": 394583434,
 			"photographerId": 527,
+			"title": "Rock Mountains",
 			"video": "Travel_Rock_Mountains.mp4",
+			"alt": "video des Rock Mountains",
 			"likes": 23,
 			"date": "2017-03-18",
 			"price": 45
@@ -239,6 +262,7 @@
 			"photographerId": 527,
 			"title": "Outdoor Baths",
 			"image": "Travel_Outdoor_Baths.jpg",
+			"alt": "Bain dans une grande source chaude",
 			"likes": 101,
 			"date": "2017-04-03",
 			"price": 45
@@ -248,6 +272,7 @@
 			"photographerId": 527,
 			"title": "Road into the Hill",
 			"image": "Travel_Road_into_Hill.jpg",
+			"alt": "routes à travers de collines",
 			"likes": 99,
 			"date": "2018-04-30",
 			"price": 45
@@ -257,6 +282,7 @@
 			"photographerId": 527,
 			"title": "Bridge into the Forest",
 			"image": "Travel_Bridge_into_Forest.jpg",
+			"alt": "Pont traversant une forêt",
 			"likes": 34,
 			"date": "2016-04-05",
 			"price": 45
@@ -266,6 +292,7 @@
 			"photographerId": 527,
 			"title": "Boat Wonderer",
 			"image": "Travel_Boat_Wanderer.jpg",
+			"alt": "vue d'un bateau sur un lac vers les montagnes",
 			"likes": 23,
 			"date": "2017-03-18",
 			"price": 45
@@ -275,6 +302,7 @@
 			"photographerId": 527,
 			"title": "Portrait Sunkiss",
 			"image": "Portrait_Sunkissed.jpg",
+			"alt": "portrait d'une femme rousse",
 			"likes": 66,
 			"date": "2018-05-24",
 			"price": 45
@@ -284,6 +312,7 @@
 			"photographerId": 527,
 			"title": "Shaw Potrait",
 			"image": "Portrait_Shaw.jpg",
+			"alt": "potrait d'un homme en noir et blanc",
 			"likes": 52,
 			"date": "2017-04-21",
 			"price": 45
@@ -293,6 +322,7 @@
 			"photographerId": 527,
 			"title": "Alexandra",
 			"image": "Portrait_Alexandra.jpg",
+			"alt": "portrait d'une femme afroaméricaine",
 			"likes": 95,
 			"date": "2018-11-02",
 			"price": 45
@@ -302,6 +332,7 @@
 			"photographerId": 527,
 			"title": "Afternoon Break",
 			"image": "Portrait_AfternoonBreak.jpg",
+			"alt": "portrai tun homme agé",
 			"likes": 25,
 			"date": "2019-01-02",
 			"price": 45
@@ -312,6 +343,7 @@
 			"photographerId": 243,
 			"title": "Lonesome",
 			"image": "Travel_Lonesome.jpg",
+			"alt": "vue sur des collines ensoleillées",
 			"likes": 88,
 			"date": "2019-02-03",
 			"price": 45
@@ -321,6 +353,7 @@
 			"photographerId": 243,
 			"title": "Hillside Color",
 			"image": "Travel_HillsideColor.jpg",
+			"alt": "village coloré au bord de mer sur une colline",
 			"likes": 85,
 			"date": "2019-04-03",
 			"price": 45
@@ -330,6 +363,7 @@
 			"photographerId": 243,
 			"title": "Wednesday Potrait",
 			"image": "Portrait_Wednesday.jpg",
+			"alt": "portrait noir et blanc d'une fille",
 			"likes": 34,
 			"date": "2019-04-07",
 			"price": 45
@@ -339,6 +373,7 @@
 			"photographerId": 243,
 			"title": "Nora Portrait",
 			"image": "Portrait_Nora.jpg",
+			"alt": "femme afroaméricaine avec lunette",
 			"likes": 63,
 			"date": "2019-04-07",
 			"price": 45
@@ -348,6 +383,7 @@
 			"photographerId": 243,
 			"title": "Raw Black Portrait",
 			"image": "Portrait_Background.jpg",
+			"alt": "portrait femme en pull noir",
 			"likes": 55,
 			"date": "2019-06-20",
 			"price": 45
@@ -357,6 +393,7 @@
 			"photographerId": 243,
 			"title": "Seaside Wedding",
 			"image": "Event_SeasideWedding.jpg",
+			"alt": "table dresser avec des serviettes rouges pour un mariage ",
 			"likes": 25,
 			"date": "2019-06-21",
 			"price": 45
@@ -366,6 +403,7 @@
 			"photographerId": 243,
 			"title": "Boulder Wedding",
 			"image": "Event_PintoWedding.jpg",
+			"alt": "couple de mariée enlacer posant entre des rochers",
 			"likes": 52,
 			"date": "2019-06-25",
 			"price": 45
@@ -375,6 +413,7 @@
 			"photographerId": 243,
 			"title": "Benevides Wedding",
 			"image": "Event_BenevidesWedding.jpg",
+			"alt": "couple de mariée posant sur le chemin de l'autel en exterieur",
 			"likes": 77,
 			"date": "2019-06-28",
 			"price": 45
@@ -382,7 +421,9 @@
 		{
 			"id": 5234343,
 			"photographerId": 243,
+			"title": "Wild Horses in the Mountains",
 			"video": "Animals_Wild_Horses_in_the_mountains.mp4",
+			"alt": "video de cheveaux dans les montagnes",
 			"likes": 142,
 			"date": "2019-08-23",
 			"price": 60
@@ -392,6 +433,7 @@
 			"photographerId": 243,
 			"title": "Rainbow Bird",
 			"image": "Animals_Rainbow.jpg",
+			"alt": "petite oiseau coloré",
 			"likes": 59,
 			"date": "2019-07-02",
 			"price": 60
@@ -402,6 +444,7 @@
 			"photographerId": 195,
 			"title": "Japanese Tower, Kyoto",
 			"image": "Travel_Tower.jpg",
+			"alt": "vue sur une tour Japonaise",
 			"likes": 25,
 			"date": "2019-04-03",
 			"price": 60
@@ -411,6 +454,7 @@
 			"photographerId": 195,
 			"title": "Senset on Canals, Venice",
 			"image": "Travel_SunsetonCanals.jpg",
+			"alt": "canal de venice",
 			"likes": 53,
 			"date": "2019-05-06",
 			"price": 60
@@ -420,6 +464,7 @@
 			"photographerId": 195,
 			"title": "Mountain and Lake",
 			"image": "Travel_OpenMountain.jpg",
+			"alt": "vue d'un lac entre montagne",
 			"likes": 33,
 			"date": "2019-05-12",
 			"price": 60
@@ -429,6 +474,7 @@
 			"photographerId": 195,
 			"title": "City Bike and Stair, Paris",
 			"image": "Travel_Bike_and_Stair.jpg",
+			"alt": "vélo dans les rues de Paris",
 			"likes": 53,
 			"date": "2019-06-20",
 			"price": 60
@@ -438,6 +484,7 @@
 			"photographerId": 195,
 			"title": "Adventure Door, India",
 			"image": "Travel_Adventure_Door.jpg",
+			"alt": "Vue sur un paysage au travers d'une porte indienne",
 			"likes": 63,
 			"date": "2019-06-26",
 			"price": 60
@@ -447,6 +494,7 @@
 			"photographerId": 195,
 			"title": "Contrast, St Petersburg",
 			"image": "Architecture_Contrast.jpg",
+			"alt": "vue sur le toit d'un batiment de St Petersburg",
 			"likes": 52,
 			"date": "2019-06-30",
 			"price": 60
@@ -456,6 +504,7 @@
 			"photographerId": 195,
 			"title": "On a Hill, Tibet",
 			"image": "Architecture_On_a_hill.jpg",
+			"alt": "village sur une colline au Tibet",
 			"likes": 63,
 			"date": "2019-07-20",
 			"price": 60
@@ -465,6 +514,7 @@
 			"photographerId": 195,
 			"title": "Leaning Tower, Pisa",
 			"image": "Architecture_Dome.jpg",
+			"alt": "Tour de Pise vue d'en bas",
 			"likes": 88,
 			"date": "2020-01-05",
 			"price": 60
@@ -472,7 +522,9 @@
 		{
 			"id": 9259398453,
 			"photographerId": 195,
+			"title": "Circle Highways, Buenos Aires",
 			"video": "Architecture_coverr_circle_empty_highway_in_buenos_aires_587740985637.mp4",
+			"alt": "video d'un échangeur d'autoroute au Buenos Aires",
 			"likes": 57,
 			"date": "2020-01-20",
 			"price": 65
@@ -482,6 +534,7 @@
 			"photographerId": 195,
 			"title": "Corner Building and Blue Sky",
 			"image": "Architecture_Corner_Room.jpg",
+			"alt": "immeuble de coin et ciel bleu",
 			"likes": 54,
 			"date": "2020-05-05",
 			"price": 60
@@ -489,7 +542,9 @@
 		{
 			"id": 952343423,
 			"photographerId": 930,
+			"title": "Tricks in the Air",
 			"video": "Sport_Tricks_in_the_air.mp4",
+			"alt": "video d'une femme faisant de l'athlétisme",
 			"likes": 150,
 			"date": "2018-02-30",
 			"price": 70
@@ -499,6 +554,7 @@
 			"photographerId": 930,
 			"title": "Climber",
 			"image": "Sport_Next_Hold.jpg",
+			"alt": "personne qui escalade",
 			"likes": 101,
 			"date": "2018-03-05",
 			"price": 65
@@ -508,6 +564,7 @@
 			"photographerId": 930,
 			"title": "Surfer",
 			"image": "sport_water_tunnel.jpg",
+			"alt": "personne qui surfe",
 			"likes": 103,
 			"date": "2018-03-10",
 			"price": 70
@@ -517,6 +574,7 @@
 			"photographerId": 930,
 			"title": "Skier",
 			"image": "Sport_Sky_Cross.jpg",
+			"alt": "personne qui ski",
 			"likes": 77,
 			"date": "2018-04-16",
 			"price": 50
@@ -526,6 +584,7 @@
 			"photographerId": 930,
 			"title": "Race End",
 			"image": "Sport_Race_End.jpg",
+			"alt": "personnes qui font une course",
 			"likes": 88,
 			"date": "2018-04-22",
 			"price": 65
@@ -535,6 +594,7 @@
 			"photographerId": 930,
 			"title": "Jump!",
 			"image": "Sport_Jump.jpg",
+			"alt": "personnes qui font su skate",
 			"likes": 95,
 			"date": "2018-04-27",
 			"price": 70
@@ -544,6 +604,7 @@
 			"photographerId": 930,
 			"title": "White Light",
 			"image": "Architecture_White_Light.jpg",
+			"alt": "vue d'en bas de l'interieur d'un immeuble toute en blanc",
 			"likes": 52,
 			"date": "2018-05-03",
 			"price": 75
@@ -553,6 +614,7 @@
 			"photographerId": 930,
 			"title": "Water on Modern Building",
 			"image": "Architecture_Water_on_Modern.jpg",
+			"alt": "eau sur un immeuble en forme de wage",
 			"likes": 55,
 			"date": "2018-05-10",
 			"price": 72
@@ -562,6 +624,7 @@
 			"photographerId": 930,
 			"title": "Horseshoe",
 			"image": "Architecture_Horseshoe.jpg",
+			"alt": "vue d'en bas d'un immeuble",
 			"likes": 85,
 			"date": "2018-05-15",
 			"price": 71
@@ -571,6 +634,7 @@
 			"photographerId": 930,
 			"title": "Cross Bar",
 			"image": "Architecture_Cross_Bar.jpg",
+			"alt": "vue d'en bas d'un immeuble",
 			"likes": 66,
 			"date": "2018-05-20",
 			"price": 58
@@ -580,6 +644,7 @@
 			"photographerId": 930,
 			"title": "Connected Curves",
 			"image": "Architecture_Connected_Curves.jpg",
+			"alt": "vue d'en bas d'un immeuble",
 			"likes": 79,
 			"date": "2018-05-21",
 			"price": 80
