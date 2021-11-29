@@ -4,6 +4,11 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/brands.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/solid.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <title>Fisheye - photographe </title>
   </head>
@@ -14,8 +19,16 @@
       </a>
     </header>
     <main id="main">
-      <div id="photograph-header"> 
-      </div>
+      <div id="photograph-header"></div>
+      <aside class="filter">
+        <label class="filter-label" id="filter-label" for="filter">Trier par</label>
+          <select id="list" onchange="getSelectValue();" class="filter-wrapper">
+            <option class="filter-listbox-option" id="filter-rate" value="rate" name="Popularité">Popularité</option>
+            <option class="filter-listbox-option"  id="filter-date" value="date" name="Date">Date</option>
+            <option class="filter-listbox-option"  id="filter-title" value="title" name="Titre">Titre</option>
+          </select>
+      </aside>
+      <div id="photographer-media"></div>
     </main>
     <div id="contact_modal">
 			<div class="modal">

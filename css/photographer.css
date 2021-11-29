@@ -1,7 +1,5 @@
-#contact_modal {
-    display: none;
-}
 
+/*css header page photographer*/
 #photograph-header {
     background-color: #FAFAFA;
     height: 300px;
@@ -44,7 +42,7 @@
     font-family: DM Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 50px;
     line-height: 83px;
     color: #D3573C;
     text-align:left ;
@@ -86,6 +84,7 @@
     cursor: pointer;
     margin: auto;
 }
+/*css likes total photographer*/
 .priceandlike {
     position: fixed;
     bottom: 0;
@@ -101,11 +100,13 @@
   .priceandlike svg {
     height: 20px;
   }
+  /*css card media photographer*/
   #photographer-media{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin:  100px;
   }
   .card {
     width: 350px;
@@ -114,6 +115,7 @@
     flex-direction: column;
     animation: animate-media 0.5s ease-in-out;
     margin-bottom: 50px;
+    position: relative;
   }
   .card-media img, .card-media video {
     width: 100%;
@@ -121,6 +123,7 @@
     border-radius: 5px;
     object-fit: cover;
     cursor: pointer;
+   
   }
   .card-header {
     display: flex;
@@ -149,12 +152,85 @@
     color:#901C1C;
     fill: currentColor;
   }
-  .card-media .video-icon {
+  .card-media .video-icon, .card-media i {
     position: absolute;
-    width: 6rem;
+    right: 140px;
+    font-size: 50px;
+    top: 120px;
     color: rgba(255, 255, 255, 0.8);
     fill: currentColor;
   }
+  /*css filter*/
+  .filter{
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 0;
+    gap: 0.75rem;
+    font-weight: 700;
+    margin: 0 100px;
+  }
+  .filter-wrapper {
+    position: relative;
+    width: 170px;
+    height: 70px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-weight: 700;
+    background-color: #901C1C;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 23.5px;
+  }
+  .filter-wrapper:after {
+    transform: rotate(180deg);
+  }
+  .filter-wrapper:hover, .filter-wrapper:focus {
+    background-color: #D3573C;
+    color: #000000;
+  }
+  select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    padding: var(--listbox-py) 0;
+    border-radius: 5px;
+    background-color: #901C1C;
+    box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+  .filter-listbox-option {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    height: var(--listbox-option-h);
+    padding: 0 var(--button-px);
+    transition: all 0.2s linear;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  .filter-listbox-option:before {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    left: 5%;
+    z-index: 5;
+    display: block;
+    content: "";
+    border-top: 1px solid #FFFFFF;
+  }
+  .filter-listbox-option:hover, .filter-listbox-option:after {
+    background-color: #D3573C;
+    color: #000000;
+  }
+  /*css modal*/
+  #contact_modal {
+    display: none;
+}
 .modal {
     border-radius: 5px;
     background-color: #DB8876;

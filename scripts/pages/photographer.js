@@ -17,8 +17,6 @@ function createphotographerPage(data){
                 <img src="assets/photographers/Photographers ID Photos/${data.portrait}" alt="${data.name}">
             </div>
         </div>
-        <div id="photographer-media">
-        </div>
         <div class="priceandlike">
             <div class="priceandlike-like">
                 <span class="data-likes-count"></span>
@@ -46,7 +44,6 @@ function createMediaCardImage(media){
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="likes"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>
             </div>
         </div>`;
-        console.log(media)
     $wrapperMedia.innerHTML = photographerMediaPage;
     return ($wrapperMedia);
 }
@@ -60,7 +57,10 @@ function createMediaCardVideo(media){
             <video aria-label="${media.alt}" data-lightbox data-lightbox-caption="${media.title}">
                 <source src="assets/photographers/${media.photographerId}/${media.video}" type="video/mp4">
             </video>
+            <i class="fas fa-video"></i>
+            <!--
             <svg class="video-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M488 64h-8v20c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V64H96v20c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12V64h-8C10.7 64 0 74.7 0 88v336c0 13.3 10.7 24 24 24h8v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h320v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h8c13.3 0 24-10.7 24-24V88c0-13.3-10.7-24-24-24zM96 372c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm280 208c0 6.6-5.4 12-12 12H148c-6.6 0-12-5.4-12-12V124c0-6.6 5.4-12 12-12h216c6.6 0 12 5.4 12 12v264zm104-16c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40z"/></svg>
+            -->
         </a>
         <div class="card-header">
             <p class="card-header-title">${media.title}</p>
@@ -69,7 +69,6 @@ function createMediaCardVideo(media){
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="likes"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>
             </div>
         </div>`;
-        console.log(media)
     $wrapperMedia.innerHTML = photographerMediaPage;
     return ($wrapperMedia);
 }
@@ -79,7 +78,6 @@ async function renderPhotographer (photographer) {
     // Header
     const photographerDom = document.getElementById('photograph-header');
     const template = createphotographerPage(photographer);
-    console.log(photographer)
     photographerDom.appendChild(template);
     }
 
@@ -93,7 +91,6 @@ async function fetchData (idPhotographer) {
             (photographer) => {
                 if (photographer.id == idPhotographer){
                     data  = photographer;
-                    console.log(data);
                 }    
             });   
         return data;
@@ -109,8 +106,6 @@ async function renderMediaPhotographer (medias) {
     
     medias.forEach(
         (media)=>{
-            
-            console.log(media);
             if(media.video){
                 const template = createMediaCardVideo(media);
                 photographerMediaDom.appendChild(template);
@@ -148,7 +143,6 @@ async function getPhotographer() {
     document.title = 'FishEye ' + photographer.name;
     renderPhotographer( photographer);
     let tabMediaPhotographer = await fetchDataMedia(photographer.id);
-    console.log(tabMediaPhotographer)
     //calcule nombre total des likes
     let likeTotalPhotographer = 0;
     for(let i=0;i<tabMediaPhotographer.length; i++){
@@ -157,7 +151,44 @@ async function getPhotographer() {
     const likesPhotographer = document.getElementsByClassName("data-likes-count");
     likesPhotographer[0].innerHTML = likeTotalPhotographer 
     renderMediaPhotographer(tabMediaPhotographer);
+    let orderSort = getSelectValue();
+    if(orderSort){
+        const tabMediaPhotographerSort = applyFilter(tabMediaPhotographer, orderSort);
+        console.log(tabMediaPhotographerSort)
+        const photogarpherMedia = document.getElementById("photographer-media")
+        console.log(photogarpherMedia)
+        while(photogarpherMedia.firstChild){
+            console.log(photogarpherMedia.firstChild)
+            photogarpherMedia.removeChild(photogarpherMedia.firstChild)
+        } 
+        renderMediaPhotographer(tabMediaPhotographerSort);
+    }
 }
+//trier media par titre
+function applyOrderByTitle (medias) {
+   return medias.sort((a, b) => a.title < b.title ? -1 : 0);
+}
+//trier media par date
+function applyOrderByDate (medias) {
+    return medias.sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+//trier media par likes
+function applyOrderByLikes (medias) {
+    return medias.sort((a, b) => b.likes - a.likes);
+}
+//appliquer filtre
+function  applyFilter (medias,order) {
+    let filtered = applyOrderByTitle(medias);
+    if (order == 'rate') filtered = applyOrderByLikes(filtered);
+    else if (order == 'date') filtered = applyOrderByDate(filtered);
+    return filtered;
+}
+function getSelectValue()
+        {
+            var selectedValue = document.getElementById("list").value;
+            console.log(selectedValue);
+            return selectedValue;
+        }
 
 async function init() {
     // Récupère la datas de photographer
