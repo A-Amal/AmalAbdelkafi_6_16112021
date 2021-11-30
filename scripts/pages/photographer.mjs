@@ -1,4 +1,4 @@
-
+import Lightbox from "./lightbox.mjs";
 // create photogarpher header
 function createphotographerPage(data){
     const $wrapper = document.createElement('article');
@@ -34,7 +34,7 @@ function createMediaCardImage(media){
     const $wrapperMedia = document.createElement('article');
     $wrapperMedia.classList.add('card');
     const photographerMediaPage =`
-        <a href="#" class="card-media" aria-label=${media.title}, closeup view">
+        <a href="assets/photographers/${media.photographerId}/${media.image}" class="card-media" aria-label=${media.title} name=${media.title} closeup view">
             <img src="assets/photographers/${media.photographerId}/${media.image}" alt="${media.alt}">
         </a>
         <div class="card-header">
@@ -52,7 +52,7 @@ function createMediaCardVideo(media){
     const $wrapperMedia = document.createElement('article');
     $wrapperMedia.classList.add('card');
     const photographerMediaPage =`
-        <a href="#" class="card-media" aria-label=${media.title}, closeup view">
+        <a href="assets/photographers/${media.photographerId}/${media.video}" class="card-media" aria-label=${media.title}, closeup view">
            
             <video aria-label="${media.alt}" data-lightbox data-lightbox-caption="${media.title}">
                 <source src="assets/photographers/${media.photographerId}/${media.video}" type="video/mp4">
@@ -186,15 +186,19 @@ function  applyFilter (medias,order) {
 function getSelectValue()
         {
             var selectedValue = document.getElementById("list").value;
-            console.log(selectedValue);
             return selectedValue;
         }
 
 async function init() {
     // Récupère la datas de photographer
-     await getPhotographer();
-     
-  
+    await getPhotographer();
+    const links =Array.from( document.querySelectorAll('a[href$=".jpg"]'));
+        const gallery = links.map(link =>link.getAttribute('href'));
+        links.forEach(link=> link.addEventListener('click', e=>{
+            e.preventDefault();
+            new Lightbox(e.currentTarget.getAttribute("href"), gallery)
+            
+        }))
 }
 
 init();

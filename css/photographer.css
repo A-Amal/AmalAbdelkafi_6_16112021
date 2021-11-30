@@ -172,7 +172,7 @@
   .filter-wrapper {
     position: relative;
     width: 170px;
-    height: 70px;
+    height: 69px;
     border: none;
     display: flex;
     flex-direction: column;
@@ -196,7 +196,7 @@
     left: 0;
     z-index: 3;
     width: 100%;
-    padding: var(--listbox-py) 0;
+    padding: 25px 20px;
     border-radius: 5px;
     background-color: #901C1C;
     box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.2);
@@ -206,8 +206,8 @@
     z-index: 4;
     display: flex;
     align-items: center;
-    height: var(--listbox-option-h);
-    padding: 0 var(--button-px);
+    height: 69px;
+    padding: 20px 20px;
     transition: all 0.2s linear;
     text-align: left;
     cursor: pointer;
