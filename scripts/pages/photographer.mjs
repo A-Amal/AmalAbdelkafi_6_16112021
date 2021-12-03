@@ -1,4 +1,5 @@
 import Lightbox from "./lightbox.mjs";
+import {displayModal, closeModal, validateMoadal} from "../utils/contactForm.mjs"
 // create photogarpher header
 function createphotographerPage(data){
     const $wrapper = document.createElement('article');
@@ -13,7 +14,7 @@ function createphotographerPage(data){
             <div class="photographer-button">
                 <button class="contact_button" onclick="displayModal()" aria-label="Contact me">Contactez-moi</button>
             </div>
-            <div class="photographer-picture">
+            <div class="photographer-picture photo">
                 <img src="assets/photographers/Photographers ID Photos/${data.portrait}" alt="${data.name}">
             </div>
         </div>
@@ -72,15 +73,12 @@ function createMediaCardVideo(media){
     $wrapperMedia.innerHTML = photographerMediaPage;
     return ($wrapperMedia);
 }
-
-
 async function renderPhotographer (photographer) {
     // Header
     const photographerDom = document.getElementById('photograph-header');
     const template = createphotographerPage(photographer);
     photographerDom.appendChild(template);
     }
-
 
 async function fetchData (idPhotographer) {
     try {
@@ -177,28 +175,47 @@ function applyOrderByLikes (medias) {
     return medias.sort((a, b) => b.likes - a.likes);
 }
 //appliquer filtre
-function  applyFilter (medias,order) {
+function  applyFilter (medias, order) {
     let filtered = applyOrderByTitle(medias);
     if (order == 'rate') filtered = applyOrderByLikes(filtered);
     else if (order == 'date') filtered = applyOrderByDate(filtered);
     return filtered;
 }
 function getSelectValue()
-        {
-            var selectedValue = document.getElementById("list").value;
-            return selectedValue;
-        }
+    {
+        var selectedValue = document.getElementById("list").value;
+        return selectedValue;
+    }
 
 async function init() {
     // Récupère la datas de photographer
     await getPhotographer();
     const links =Array.from( document.querySelectorAll('a[href$=".jpg"]'));
-        const gallery = links.map(link =>link.getAttribute('href'));
-        links.forEach(link=> link.addEventListener('click', e=>{
-            e.preventDefault();
-            new Lightbox(e.currentTarget.getAttribute("href"), gallery)
-            
-        }))
+    const gallery = links.map(link =>link.getAttribute('href'));
+    links.forEach(link=> link.addEventListener('click', e => {
+        e.preventDefault();
+        new Lightbox(e.currentTarget.getAttribute("href"), gallery)
+        
+    }));
+    const contactBtn = document.getElementsByClassName("contact_button")
+    const btnCloseModal =document.getElementsByClassName("modal-close")
+    const modal = document.getElementById("modal-contact");
+    contactBtn[0].addEventListener('click', () =>{
+        displayModal(modal)
+        btnCloseModal[0].focus();
+    })
+    btnCloseModal[0].addEventListener('click', () =>{
+        btnCloseModal[0].focus();
+        modal.setAttribute('aria-hidden', 'true');
+        closeModal(modal)
+    })
+    document.addEventListener('keyup',(e)=>{
+        if(e.key == 'Escape'){
+            modal.style.display = "none";
+        }
+    })
+    const modalcontent=document.querySelector('form')
+    modalcontent.addEventListener("click", validateMoadal);
 }
 
 init();

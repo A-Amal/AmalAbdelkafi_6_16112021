@@ -1,3 +1,4 @@
+import {enableBodyScroll, disableBodyScroll} from "../utils/body-scroll-lock.mjs"
 export default class Lightbox{
 
     constructor(url, images){
@@ -6,6 +7,7 @@ export default class Lightbox{
         this.loadImage(url);
         this.onKeyUp = this.onKeyUp.bind(this);
         document.body.appendChild(this.element);
+        disableBodyScroll(this.element);
         document.addEventListener('keyup',this.onKeyUp);
     }
     loadImage(url ){
@@ -41,6 +43,7 @@ export default class Lightbox{
     close(e){
         e.preventDefault();
         this.element.classList.add('fadeOut');
+        enableBodyScroll(this.element)
         window.setTimeout(()=>{
             this.element.parentElement.removeChild(this.element)
         }, 500)

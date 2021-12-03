@@ -230,57 +230,160 @@
   /*css modal*/
   #contact_modal {
     display: none;
-}
-.modal {
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
-}
+  }
+  .modal {
+      border-radius: 5px;
+      background-color: #DB8876;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 35px;
+      margin: auto;
+  }
 
-.modal header {
-    justify-content: space-between;
-    width: 100%;
-}
+  .modal header {
+      justify-content: space-between;
+      width: 100%;
+  }
 
-.modal header img {
-    cursor: pointer;
-}
+  .modal header img {
+      cursor: pointer;
+  }
 
-.modal header h2 {
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
-}
+  .modal header h2 {
+      font-size: 64px;
+      font-weight: normal;
+      text-align: center;
+  }
 
-form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-}
+  form {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+  }
 
-form label {
-    color: #312E2E;
-    font-size: 36px;
-}
+  form label {
+      color: #312E2E;
+      font-size: 36px;
+  }
 
-form div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: self-start;
-    margin-bottom: 26px;
-}
+  form div {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: self-start;
+      margin-bottom: 26px;
+  }
 
-form input {
-    width: 100%;
-    height: 68px;
-    border: none;
-    border-radius: 5px;
-}
+  form input {
+      width: 100%;
+      height: 68px;
+      border: none;
+      border-radius: 5px;
+  }
+  @media screen and (min-width:1077px ) and (max-width:1210px ) {
+    .photographer-info .photographer-name {
+      font-size: 40px;
+    }
+    .modal{
+      width: 80%;
+      margin: auto;
+    }
+  }
+  @media screen and (min-width:905px ) and (max-width:1076px ) {
+    .photographer-info .photographer-name {
+      font-size: 30px;
+    }
+    #photograph-header, .filter, .photographer-logo{
+      margin: 0 30px !important;
+    }
+    #photographer-media{
+      margin: 50px 30px;
+    }
+  }
+  @media screen and (min-width:768px ) and (max-width:904px ) {
+    #photograph-header, .filter, .photographer-logo{
+      margin: 0 30px !important;
+    }
+    .photographer-info .photographer-name {
+      font-size: 30px !important;
+    }
+    #photographer-media{
+      margin: 50px 30px;
+    }
+    .photographer-info .photographer-tagline{
+      font-size: 15px;
+    }
+  }
+  @media screen and (min-width:655px ) and (max-width:768px ){
+    .photographer-info .photographer-name {
+      font-size: 25px !important;
+    }
+    #photograph-header, .filter, .photographer-logo{
+      margin: 30px 30px !important;
+    }
+    .photographer-info .photographer-tagline{
+      font-size: 10px !important;
+    }
+    #photographer-media{
+      flex-direction: column !important;
+      margin: 50px 100px;
+    }
+    .card {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width:655px ){
+    #photograph-header{
+      margin: 0;
+    }
+    .photographer-info{
+      margin-left: 10px;
+      width: 60%;
+    }
+    .photo{
+      display: none;
+    }
+    .photographer-button{
+      width: 40%;
+    }
+    #photographer-media{
+      flex-direction: column !important;
+      margin: 50px 50px;
+    }
+    .filter{
+      margin: 20px 20px !important;
+    }
+    .card {
+      width: 100%;
+    }
+    .contact_button{
+      font-size: 15px;
+      padding: 5px;
+      width: 120px;
+    }
+    .modal-wrapper {
+      min-height: 100vh;
+    }
+    .modal-close {
+      top: 1rem;
+      right: 1.625rem;
+      width: 2.625rem;
+      height: 2.625rem;
+    }
+    .modal-close svg {
+      width: 1.875rem;
+      height: 1.875rem;
+    }
+    .modal-title {
+      padding-bottom: 0.5rem;
+    }
+    .form-submit {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
