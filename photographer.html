@@ -26,8 +26,11 @@
       <div id="photograph-header"></div>
       <aside class="filter">
         <label class="filter-label" id="filter-label" for="filter">Trier par</label>
-          <select id="list" onchange="getSelectValue();" class="filter-wrapper">
+          <select id="list" onchange="getSelectValue()" class="filter-wrapper">
+            <option class="filter-listbox-option"  id="filter-date" value="date" name="Date">Date</option>
+            <option class="filter-listbox-option"  id="filter-title" value="title" name="Titre">Titre</option>
             <option class="filter-listbox-option" id="filter-rate" value="rate" name="Popularité">Popularité</option>
+            
             <option class="filter-listbox-option"  id="filter-date" value="date" name="Date">Date</option>
             <option class="filter-listbox-option"  id="filter-title" value="title" name="Titre">Titre</option>
           </select>

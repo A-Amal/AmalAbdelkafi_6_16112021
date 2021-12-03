@@ -168,38 +168,31 @@
     gap: 0.75rem;
     font-weight: 700;
     margin: 0 100px;
+    border: none;
   }
   .filter-wrapper {
     position: relative;
     width: 170px;
     height: 69px;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    color: #FFFFFF;
-    font-weight: 700;
-    background-color: #901C1C;
-    border-radius: 5px;
-    font-size: 18px;
-    line-height: 23.5px;
-  }
-  .filter-wrapper:after {
-    transform: rotate(180deg);
-  }
-  .filter-wrapper:hover, .filter-wrapper:focus {
-    background-color: #D3573C;
-    color: #000000;
-  }
-  select {
-    position: absolute;
     top: 0;
     left: 0;
     z-index: 3;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
     padding: 25px 20px;
     border-radius: 5px;
     background-color: #901C1C;
     box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.2);
+    border: none;
+    font-size: 18px;
+    line-height: 23.5px;
+  }
+  
+  .filter-wrapper:hover, .filter-wrapper:focus {
+    background-color: #901C1C;
+    color: #000000;
+    border: none;
   }
   .filter-listbox-option {
     position: relative;
@@ -212,6 +205,7 @@
     text-align: left;
     cursor: pointer;
     outline: none;
+    border: none;
   }
   .filter-listbox-option:before {
     position: absolute;
@@ -222,10 +216,12 @@
     display: block;
     content: "";
     border-top: 1px solid #FFFFFF;
+    border: none;
   }
   .filter-listbox-option:hover, .filter-listbox-option:after {
-    background-color: #D3573C;
+    background-color: #923232;
     color: #000000;
+    border: none;
   }
   /*css modal*/
   #contact_modal {

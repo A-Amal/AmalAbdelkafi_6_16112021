@@ -41,7 +41,7 @@ function createMediaCardImage(media){
         <div class="card-header">
             <p class="card-header-title">${media.title}</p>
             <div class="card-header-like" role="button" data-likes=${media.id}>
-                <span class="counter" data-likes-count>${media.likes}</span>
+                <span class="counter" value="${media.likes}" data-likes-count>${media.likes}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="likes"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>
             </div>
         </div>`;
@@ -150,13 +150,11 @@ async function getPhotographer() {
     likesPhotographer[0].innerHTML = likeTotalPhotographer 
     renderMediaPhotographer(tabMediaPhotographer);
     let orderSort = getSelectValue();
+    console.log(orderSort)
     if(orderSort){
         const tabMediaPhotographerSort = applyFilter(tabMediaPhotographer, orderSort);
-        console.log(tabMediaPhotographerSort)
         const photogarpherMedia = document.getElementById("photographer-media")
-        console.log(photogarpherMedia)
         while(photogarpherMedia.firstChild){
-            console.log(photogarpherMedia.firstChild)
             photogarpherMedia.removeChild(photogarpherMedia.firstChild)
         } 
         renderMediaPhotographer(tabMediaPhotographerSort);
@@ -182,14 +180,44 @@ function  applyFilter (medias, order) {
     return filtered;
 }
 function getSelectValue()
-    {
-        var selectedValue = document.getElementById("list").value;
-        return selectedValue;
+    {   let valueOrder =""
+        let selectedValue = document.getElementsByClassName("filter-wrapper");
+        console.log(selectedValue[0].options)
+        for(let i=0; i<selectedValue[0].options.length; i++){
+            if(selectedValue[0].options[i].selected === true){
+                valueOrder = selectedValue[0].options[i].value
+                console.log(valueOrder)
+            }
+        }
+        return valueOrder;
     }
 
 async function init() {
     // Récupère la datas de photographer
     await getPhotographer();
+    //modifier le nblikes on click
+    const cards = Array.from(document.getElementsByClassName("card-header-like"));
+    cards.forEach(card => card.addEventListener('click', e => {
+        e.preventDefault();
+        let nblike = e.currentTarget.getElementsByClassName('counter')
+        console.log(nblike[0])
+        console.log(parseInt(nblike[0].getAttribute("value"))+1)
+        const likes =parseInt(nblike[0].getAttribute("value"))+1;
+        card.removeChild(nblike[0]);
+        const newElementLike = `<span class="counter" value="${likes}" data-likes-count>${likes}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="likes"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>`
+        card.innerHTML=newElementLike;
+        
+        const nbTotalLikes= document.getElementsByClassName("data-likes-count");
+        const containerNbTotalLikes = document.getElementsByClassName("priceandlike-like");
+        console.log(nbTotalLikes[0])
+        console.log(parseInt(nbTotalLikes[0].textContent))
+        let newValTotalLikes = parseInt(nbTotalLikes[0].textContent) +1;
+        containerNbTotalLikes[0].removeChild(nbTotalLikes[0]);
+        const newTotalLike = `<span class="data-likes-count">${newValTotalLikes}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="likes"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>`
+        containerNbTotalLikes[0].innerHTML = newTotalLike
+    }))
     const links =Array.from( document.querySelectorAll('a[href$=".jpg"]'));
     const gallery = links.map(link =>link.getAttribute('href'));
     links.forEach(link=> link.addEventListener('click', e => {
