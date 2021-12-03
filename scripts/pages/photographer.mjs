@@ -149,7 +149,9 @@ async function getPhotographer() {
     const likesPhotographer = document.getElementsByClassName("data-likes-count");
     likesPhotographer[0].innerHTML = likeTotalPhotographer 
     renderMediaPhotographer(tabMediaPhotographer);
-    let orderSort = getSelectValue();
+    const listOptions =document.getElementById("list");
+    listOptions.addEventListener('click',()=>{
+        let orderSort = getSelectValue();
     console.log(orderSort)
     if(orderSort){
         const tabMediaPhotographerSort = applyFilter(tabMediaPhotographer, orderSort);
@@ -159,6 +161,8 @@ async function getPhotographer() {
         } 
         renderMediaPhotographer(tabMediaPhotographerSort);
     }
+    })
+    
 }
 //trier media par titre
 function applyOrderByTitle (medias) {
