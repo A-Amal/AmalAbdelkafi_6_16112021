@@ -161,18 +161,9 @@
     fill: currentColor;
   }
   /*css filter*/
-  .filter{
-    display: flex;
-    align-items: center;
-    padding: 0.625rem 0;
-    gap: 0.75rem;
-    font-weight: 700;
-    margin: 0 100px;
-    border: none;
-  }
-  .filter-wrapper {
-    position: relative;
-    width: 170px;
+.custom-select {
+  position: relative;
+  width: 170px;
     height: 69px;
     top: 0;
     left: 0;
@@ -180,49 +171,78 @@
     display: flex;
     flex-direction: column;
     color: #FFFFFF;
-    padding: 25px 20px;
     border-radius: 5px;
     background-color: #901C1C;
     box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.2);
     border: none;
     font-size: 18px;
-    line-height: 23.5px;
-  }
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  margin: auto 20px;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 40%;
+}
+.select-items div,.select-selected {
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
   
-  .filter-wrapper:hover, .filter-wrapper:focus {
-    background-color: #901C1C;
-    color: #000000;
-    border: none;
-  }
-  .filter-listbox-option {
-    position: relative;
-    z-index: 4;
-    display: flex;
-    align-items: center;
-    height: 69px;
-    padding: 20px 20px;
-    transition: all 0.2s linear;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-    border: none;
-  }
-  .filter-listbox-option:before {
-    position: absolute;
-    top: 0;
-    right: 5%;
-    left: 5%;
-    z-index: 5;
-    display: block;
-    content: "";
-    border-top: 1px solid #FFFFFF;
-    border: none;
-  }
-  .filter-listbox-option:hover, .filter-listbox-option:after {
-    background-color: #923232;
-    color: #000000;
-    border: none;
-  }
+}
+.select-items div{
+  height: 40px;
+  padding-top: 10px;
+  margin: auto 20px;
+  border-top: 1px solid #FFFFFF;
+  
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #901C1C;
+  border-radius:0 0 5px 5px;
+  top: 90%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+ color:sandybrown;
+}
+
+.filter{
+  display: flex;
+  align-items: center;
+  padding: 0.625rem 0;
+  gap: 0.75rem;
+  font-weight: 700;
+  margin: 0 100px;
+  border: none;
+}
   /*css modal*/
   #contact_modal {
     display: none;

@@ -185,7 +185,7 @@ function  applyFilter (medias, order) {
 }
 function getSelectValue()
     {   let valueOrder =""
-        let selectedValue = document.getElementsByClassName("filter-wrapper");
+        let selectedValue = document.getElementsByTagName('select');
         console.log(selectedValue[0].options)
         for(let i=0; i<selectedValue[0].options.length; i++){
             if(selectedValue[0].options[i].selected === true){

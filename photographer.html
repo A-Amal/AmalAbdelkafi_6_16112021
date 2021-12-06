@@ -26,12 +26,24 @@
       <div id="photograph-header"></div>
       <aside class="filter">
         <label class="filter-label" id="filter-label" for="filter">Trier par</label>
+        <div class="custom-select filter-wrapper"id="list">
+          <select>
+            <option class="filter-listbox-option" id="filter-rate" value="rate" name="Popularité">Popularité</option>
+            <option class="filter-listbox-option" id="filter-rate" value="rate" name="Popularité">Popularité</option>
+            <option class="filter-listbox-option"  id="filter-date" value="date" name="Date">Date</option>
+            <option class="filter-listbox-option"  id="filter-title" value="title" name="Titre">Titre</option>
+          </select>
+        </div>
+        <!--
+        <label class="filter-label" id="filter-label" for="filter">Trier par</label>
           <select id="list" class="filter-wrapper">
             <option class="filter-listbox-option" id="filter-rate" value="rate" name="Popularité">Popularité</option>
             <option class="filter-listbox-option"  id="filter-date" value="date" name="Date">Date</option>
             <option class="filter-listbox-option"  id="filter-title" value="title" name="Titre">Titre</option>
           </select>
+          -->
       </aside>
+      
       <div id="photographer-media"></div>
     </main>
     <aside class="modal" id="modal-contact" role="dialog" aria-labelledby="modal-contact-title" aria-hidden="true">
@@ -71,6 +83,7 @@
     
     <script  type="module" src="./scripts/utils/contactForm.mjs"></script>
     -->
+    <script src="./scripts/utils/selectFilter.mjs" ></script>
     <script type="module" src="./scripts/pages/photographer.mjs" defer></script>
     
   </body>
