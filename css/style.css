@@ -67,7 +67,6 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    outline: none;
     text-decoration: none;
   }
   p{
