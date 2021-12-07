@@ -12,22 +12,38 @@ export default class Lightbox{
     }
     loadImage(url ){
         this.url = null;
-        //this.title= null;
-        const image = new Image();
+        let image = ""
         const container = this.element.querySelector('.lightbox__container');
         const loader = document.createElement('div');
         loader.classList.add('lightbox__loader');
         container.innerHTML = ''
-        container.appendChild(loader);
-        image.src = url;
-        image.onload = ()=>{
-           container.removeChild(loader);
-           container.appendChild(image);
-           this.url = url
-           const title = (this.url+"").split("/")[(this.url+"").split("/").length-1]
-           const wrapper = this.element.querySelector('.lightbox__title');
+        if(url.split('.')[1]==="mp4"){
+            const video = document.createElement("video");
+            image = document.createElement("source");
+            image.setAttribute('src', url);
+            image.setAttribute('type', 'video/mp4');
+            video.innerHTML= image.outerHTML
+            container.appendChild(video);
+            video.play()
+            this.url = url
+            const title = (this.url+"").split("/")[(this.url+"").split("/").length-1]
+            const wrapper = this.element.querySelector('.lightbox__title');
             wrapper.innerHTML=(title.split('.'))[0].replaceAll('_',' ')
+        }else{
+            image = new Image();
+            container.appendChild(loader);
+            image.setAttribute('src', url);
+            image.onload = ()=>{
+                container.removeChild(loader);
+                container.appendChild(image);
+                this.url = url
+                const title = (this.url+"").split("/")[(this.url+"").split("/").length-1]
+                const wrapper = this.element.querySelector('.lightbox__title');
+                wrapper.innerHTML=(title.split('.'))[0].replaceAll('_',' ')
+             }
         }
+        
+        
     }
 
     onKeyUp(e){

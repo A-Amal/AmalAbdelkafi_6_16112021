@@ -72,3 +72,4 @@ function closeAllSelect(elmnt) {
   }
 }
 document.addEventListener("click", closeAllSelect);
+
