@@ -1,8 +1,8 @@
 
 
 export function displayModal(modal) {
-    modal.setAttribute('aria-hidden', 'false');
-	modal.style.display = "block";
+  modal.setAttribute('aria-hidden', 'false');
+  modal.style.display = "block";
     
 }
 
