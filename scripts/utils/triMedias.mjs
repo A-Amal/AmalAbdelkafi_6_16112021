@@ -12,8 +12,9 @@ function applyOrderByTitle (medias) {
  }
  //appliquer filtre
  export function  applyFilter (medias, order) {
-     let filtered = applyOrderByTitle(medias);
-     if (order == 'rate') filtered = applyOrderByLikes(filtered);
-     else if (order == 'date') filtered = applyOrderByDate(filtered);
+     let filtered = [];
+     if (order == 'title') filtered = applyOrderByTitle(medias);
+     else if (order == 'Popularité') filtered = applyOrderByLikes(medias);
+     else if (order == 'date') filtered = applyOrderByDate(medias);
      return filtered;
  }
